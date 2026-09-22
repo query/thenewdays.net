@@ -1,0 +1,73 @@
+---
+# Empty front matter to force Liquid processing.
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The New Days</title>
+<meta name="viewport" content="initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>The<br>New Days</h1>
+
+<main>
+<section id="links">
+<h2>Links</h2>
+<ul>
+<li><a href="https://instagram.com/the.new.days">Instagram</a></li>
+<li><a href="https://www.youtube.com/channel/UCcC7ZLQEEbFggrMweJEHKHA">YouTube</a></li>
+<li><a href="https://open.spotify.com/artist/1NuL3y1D6OM459F57AKP2g">Spotify</a></li>
+<li><a href="https://music.apple.com/jp/artist/the-new-days/1783763405">Apple Music</a></li>
+</ul>
+</section>
+
+<section id="live">
+<h2>Live</h2>
+<div id="showlist">
+<table>
+{% for show in site.data.shows limit: 2 -%}
+{% include show/show.html show=show -%}
+{% endfor -%}
+</table>
+{% if site.data.shows.size > 2 -%}
+<details>
+<summary>
+<span>More shows…</span>
+<span lang="ja">もっと先のライブ…</span>
+</summary>
+<table>
+{% for show in site.data.shows offset: 2 -%}
+{% include show/show.html show=show -%}
+{% endfor -%}
+</table>
+</details>
+{% endif -%}
+</div>
+</section>
+
+<section id="video">
+<h2>Videos</h2>
+<div class="half">
+{% include youtube.html v='hmXVmUYQyxE' title='Broken Pavement' aspect_ratio='1/1' -%}
+{% include youtube.html v='-vOaU3Hcq8Q' title='Silent Hearts' aspect_ratio='1/1' -%}
+</div>
+{% include youtube.html v='SpPUAmi3UXk' title='The Place I Used to Hide' aspect_ratio='16/9' -%}
+{% include youtube.html v='y1rMVJAIG8Q' title='Gone Like the Wind' aspect_ratio='16/9' -%}
+{% include youtube.html v='cqH2Ng1XA80' title='Lemonade' aspect_ratio='16/9' -%}
+{% include youtube.html v='O63T_kL6gBo' title='Backpack in the Sunset' aspect_ratio='256/135' -%}
+</section>
+
+<section id="members">
+<h2>Members</h2>
+<ul>
+<li><a href="https://instagram.com/im_nakul14">Anjee</a></li>
+<li><a href="https://instagram.com/tyndaria">Roger</a></li>
+<li><a href="https://instagram.com/shuster_music_">Shu</a></li>
+</ul>
+</section>
+</main>
+</body>
+</html>
