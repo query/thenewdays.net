@@ -6,9 +6,10 @@
 # location:
 #   en: English name of the venue's location.
 #   ja: Japanese name of same.
-# details: Extra description; e.g., "Acoustic set."
+# details: (Optional) Extra description; e.g., "Acoustic set."
 
 - date: 2026-10-05
+  show_url: 'https://navey-floor.com/event/2026-10-5/'
   venue: navey floor
   venue_url: 'https://navey-floor.com/'
   location:
@@ -16,6 +17,7 @@
     ja: 赤坂
 
 - date: 2026-10-27
+  show_url: 'http://www.cyclone1997.com/schedule/2026schedule_10.html'
   venue: shibuya CYCLONE
   venue_url: 'http://www.cyclone1997.com/home.html'
   location:
@@ -23,6 +25,7 @@
     ja: 渋谷
 
 - date: 2026-12-02
+  show_url: 'https://nepo.co.jp/schedules/view/3389'
   venue: NEPO
   venue_url: 'https://nepo.co.jp/'
   location:
