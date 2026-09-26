@@ -3,6 +3,20 @@
 <td class="date">{% include optional_link.html href=include.show.show_url content=formatted_date %}</td>
 <td class="venue">{% include optional_link.html href=include.show.venue_url content=include.show.venue %}</td>
 <td class="location">{{ include.show.location.en }}・<span lang="ja">{{ include.show.location.ja }}</span></td>
+{% if include.show.event -%}
+<td class="event">{{ include.show.event }}</td>
+{% endif -%}
+{% if include.show.times -%}
+<td class="times">OPEN {{ include.show.times.open }} / START {{ include.show.times.start }}
+{%- if include.show.times.stage %} / The New Days {{ include.show.times.stage }}–{% endif -%}
+</td>
+{% endif -%}
+{% if include.show.tickets -%}
+<td class="tickets">{{ include.show.tickets.en }}<br><span lang="ja">{{ include.show.tickets.ja }}</span></td>
+{% endif -%}
+{% if include.show.lineup -%}
+<td class="lineup">with {{ include.show.lineup }}</td>
+{% endif -%}
 {% if include.show.details -%}
 <td class="details">{{ include.show.details }}</td>
 {% endif -%}

@@ -6,6 +6,15 @@
 # location:
 #   en: English name of the venue's location.
 #   ja: Japanese name of same.
+# event: (Optional) Name of the event or series the show is part of.
+# times: (Optional) Doors and start times, as printed on the flyer.
+#   open: Doors time, e.g. "18:00".
+#   start: Start time.
+#   stage: Our own set time, if it is known.
+# tickets: (Optional) Prices, written out.
+#   en: English wording.
+#   ja: Japanese wording.
+# lineup: (Optional) The other artists on the bill, comma separated.
 # details: Extra description; e.g., "Acoustic set."
 
 - date: 2026-10-05
@@ -14,6 +23,16 @@
   location:
     en: Akasaka
     ja: 赤坂
+  event: navey floor pre. "The Playlist 38"
+  times:
+    open: '18:00'
+    start: '18:30'
+    stage: '20:00'
+  tickets:
+    en: 'Adv ¥2,500 / Student ¥2,000 / Streaming ¥2,000 (+1 drink ¥700)'
+    ja: '前売 ¥2,500／学割 ¥2,000／配信 ¥2,000（+1ドリンク ¥700）'
+  lineup: Pettosick, Lu'Louise, Aftermaths of the perfect horizontal urban development, DAWN.
+  details: Reserve by DM
 
 - date: 2026-10-27
   venue: shibuya CYCLONE
@@ -21,6 +40,14 @@
   location:
     en: Shibuya
     ja: 渋谷
+  event: '"BOOKINGS"'
+  times:
+    open: '18:00'
+    start: '18:30'
+  tickets:
+    en: 'Adv ¥2,500 / Door ¥2,800 (+1 drink)'
+    ja: '前売 ¥2,500／当日 ¥2,800（+1ドリンク）'
+  lineup: 蛇崩, 胡期皓, LEE JIN SOL (Korea), REDLINE (Korea)
 
 - date: 2026-12-02
   venue: NEPO
@@ -28,3 +55,11 @@
   location:
     en: Kichijoji
     ja: 吉祥寺
+  event: '"SONIC GARAGE / ASSEMBLY"'
+  times:
+    open: '18:30'
+    start: '18:55'
+  tickets:
+    en: 'Adv ¥2,500 / Door ¥3,000 (+1 drink)'
+    ja: '前売 ¥2,500／当日 ¥3,000（ドリンク代別）'
+  lineup: The Rowans, Maybe Long Sleeper, 娯日談, ニャントモニャランズ

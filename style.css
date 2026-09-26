@@ -62,7 +62,7 @@ table {
 tr {
     display: block;
     list-style: none;
-    margin: 0 0 0.5em;
+    margin: 0 0 1.25em;
 }
 
 td {
@@ -87,8 +87,22 @@ td {
     line-height: 1.4666;
 }
 
+/* The per-show details from shows.yml. Sized in rem rather than as a share of
+   the surrounding text, so they stay readable at any width. */
+.event,
+.times,
+.tickets,
+.lineup,
 .details {
+    font-family: var(--sans-serif);
+    font-size: 1.0625rem;
+    line-height: 1.5;
     color: #888;
+}
+
+.event {
+    font-style: italic;
+    margin-top: 0.2em;
 }
 
 .details::after {
