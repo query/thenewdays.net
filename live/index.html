@@ -1,0 +1,59 @@
+---
+# Empty front matter to force Liquid processing.
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Live — The New Days</title>
+<meta name="viewport" content="initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Every upcoming The New Days show, with times, ticket prices and who else is playing. The New Days のライブ日程・時間・料金・対バン。">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<h1><a href="../">The<br>New Days</a></h1>
+
+<main>
+<section id="live">
+<h2>Live</h2>
+<div id="showlist">
+{% for show in site.data.shows -%}
+<article class="show" id="{{ show.date | date: '%Y-%m-%d' }}">
+<p class="date">{% include show/date.html date=show.date %}</p>
+<p class="venue">{% include optional_link.html href=show.venue_url content=show.venue %}
+<span class="location">{% include bitext.html en=show.location.en ja=show.location.ja %}</span></p>
+{% if show.event -%}
+<p class="event">{{ show.event }}</p>
+{% endif -%}
+{% if show.times -%}
+<p class="times">OPEN {{ show.times.open }} / START {{ show.times.start }}
+{%- if show.times.stage %} / The New Days {{ show.times.stage }}–{% endif %}</p>
+{% endif -%}
+{% if show.tickets -%}
+<p class="tickets">{% include bitext.html en=show.tickets.en ja=show.tickets.ja %}</p>
+{% endif -%}
+{% if show.lineup -%}
+<p class="lineup">with {{ show.lineup }}</p>
+{% endif -%}
+{% if show.extra -%}
+<p class="extra">{{ show.extra }}</p>
+{% endif -%}
+<p class="links">
+{% if show.ticket_url -%}
+<a class="tickets-link" href="{{ show.ticket_url }}">{% include bitext.html en='Tickets' ja='チケット' %}</a>
+{%- else -%}
+<a class="tickets-link" href="https://instagram.com/the.new.days">{% include bitext.html en='Tickets by DM' ja='DMでチケット予約' %}</a>
+{%- endif %}
+{% if show.show_url -%}
+<a class="venue-link" href="{{ show.show_url }}">{% include bitext.html en='At the venue' ja='会場の公演ページ' %}</a>
+{%- endif %}
+</p>
+</article>
+{% endfor -%}
+</div>
+<p class="back"><a href="../">{% include bitext.html en='Back to the front page' ja='トップへ' %}</a></p>
+</section>
+</main>
+</body>
+</html>

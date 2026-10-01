@@ -245,3 +245,86 @@ a:link, a:visited {
         grid-row: 4;
     }
 }
+
+/* The /live/ page: the same show data, laid out one show per block rather
+   than one line each. Sizes are in rem so the long lines stay readable
+   whatever the surrounding scale is. */
+
+.show {
+    padding-bottom: 1.25em;
+}
+
+.show + .show,
+::details-content .show {
+    padding-top: 1.25em;
+    border-top: 1px solid;
+}
+
+.show .venue::after {
+    content: none;
+}
+
+.show .location::before {
+    content: ' / ';
+}
+
+.show .event,
+.show .times,
+.show .tickets,
+.show .lineup,
+.show .links {
+    font-family: var(--sans-serif);
+    font-size: 1.0625rem;
+    line-height: 1.5;
+}
+
+.show .event {
+    font-style: italic;
+    margin-top: 0.25em;
+}
+
+/* Prices are the one place the two languages say different things, so they
+   get a line each rather than sitting on one line with a separator. */
+.show .tickets .bitext-separator {
+    display: none;
+}
+
+.show .tickets [lang='ja'] {
+    display: block;
+}
+
+.show .links {
+    margin-top: 0.75em;
+}
+
+.show .links a {
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0;
+    padding: 0.4em 0.8em;
+    border: 1px solid;
+    border-radius: 0.4em;
+    text-decoration: none;
+}
+
+.show .links .bitext-separator {
+    margin-inline: 0.2em;
+}
+
+.back {
+    font-family: var(--sans-serif);
+    font-size: 1.0625rem;
+    margin-top: 1.5em;
+}
+
+#showlist .more {
+    font: 1.0625rem/1.4 var(--sans-serif);
+    margin-top: 0.75em;
+}
+
+#showlist .more .bitext-separator {
+    display: none;
+}
+
+#showlist .more [lang='ja'] {
+    display: block;
+}
